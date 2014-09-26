@@ -21,6 +21,7 @@
 
     RootViewController *rootViewController = [[RootViewController alloc] initWithNibName:nil bundle:nil];
     self.window.rootViewController = rootViewController;
+    NSLog(@"rootViewController.controllerName = %@", rootViewController.controllerName);
 
     [self.window makeKeyAndVisible];
 

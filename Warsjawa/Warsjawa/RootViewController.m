@@ -10,11 +10,11 @@
 
 // private category
 @interface RootViewController ()
-
+@property (nonatomic, strong, readwrite) NSString *methodName;
 @end
 
 @implementation RootViewController {
-    NSString *_controllerName;
+    NSString *_superclassName;
 }
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -22,6 +22,12 @@
     if (self) {
         _controllerName = NSStringFromClass([self class]);
         NSLog(@"self.controllerName = %@", _controllerName);
+
+        self.methodName = NSStringFromSelector(@selector(initWithNibName:bundle:));
+        NSLog(@"_methodName = %@", _methodName);
+
+        _superclassName = NSStringFromClass([self superclass]);
+        NSLog(@"_superclassName = %@", _superclassName);
     }
 
     return self;
