@@ -1,0 +1,11 @@
+*.build
+*.svn
+*.pyc
+*xcuserdata/
+*.xccheckout
+
+# syntax: regex (in hg)
+.gradle
+flow-*
+build
+.idea

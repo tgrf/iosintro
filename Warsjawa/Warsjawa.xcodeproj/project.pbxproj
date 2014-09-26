@@ -11,9 +11,7 @@
 		1539015619D6088A00F9EDF6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1539015519D6088A00F9EDF6 /* AppDelegate.m */; };
 		1539015919D6088A00F9EDF6 /* Warsjawa.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1539015719D6088A00F9EDF6 /* Warsjawa.xcdatamodeld */; };
 		1539015C19D6088A00F9EDF6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1539015B19D6088A00F9EDF6 /* ViewController.m */; };
-		1539015F19D6088A00F9EDF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1539015D19D6088A00F9EDF6 /* Main.storyboard */; };
 		1539016119D6088A00F9EDF6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1539016019D6088A00F9EDF6 /* Images.xcassets */; };
-		1539016419D6088A00F9EDF6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1539016219D6088A00F9EDF6 /* LaunchScreen.xib */; };
 		1539017019D6088A00F9EDF6 /* WarsjawaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1539016F19D6088A00F9EDF6 /* WarsjawaTests.m */; };
 /* End PBXBuildFile section */
 
@@ -36,9 +34,7 @@
 		1539015819D6088A00F9EDF6 /* Warsjawa.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Warsjawa.xcdatamodel; sourceTree = "<group>"; };
 		1539015A19D6088A00F9EDF6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		1539015B19D6088A00F9EDF6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		1539015E19D6088A00F9EDF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1539016019D6088A00F9EDF6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		1539016319D6088A00F9EDF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		1539016919D6088A00F9EDF6 /* WarsjawaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WarsjawaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1539016E19D6088A00F9EDF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1539016F19D6088A00F9EDF6 /* WarsjawaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WarsjawaTests.m; sourceTree = "<group>"; };
@@ -87,9 +83,7 @@
 				1539015519D6088A00F9EDF6 /* AppDelegate.m */,
 				1539015A19D6088A00F9EDF6 /* ViewController.h */,
 				1539015B19D6088A00F9EDF6 /* ViewController.m */,
-				1539015D19D6088A00F9EDF6 /* Main.storyboard */,
 				1539016019D6088A00F9EDF6 /* Images.xcassets */,
-				1539016219D6088A00F9EDF6 /* LaunchScreen.xib */,
 				1539015719D6088A00F9EDF6 /* Warsjawa.xcdatamodeld */,
 				1539015019D6088A00F9EDF6 /* Supporting Files */,
 			);
@@ -202,8 +196,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1539015F19D6088A00F9EDF6 /* Main.storyboard in Resources */,
-				1539016419D6088A00F9EDF6 /* LaunchScreen.xib in Resources */,
 				1539016119D6088A00F9EDF6 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -246,25 +238,6 @@
 			targetProxy = 1539016A19D6088A00F9EDF6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		1539015D19D6088A00F9EDF6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1539015E19D6088A00F9EDF6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		1539016219D6088A00F9EDF6 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1539016319D6088A00F9EDF6 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1539017119D6088A00F9EDF6 /* Debug */ = {
@@ -347,6 +320,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = Warsjawa/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -357,6 +331,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = Warsjawa/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
