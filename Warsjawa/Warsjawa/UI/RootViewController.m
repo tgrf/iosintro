@@ -10,6 +10,9 @@
 #import "RootView.h"
 #import "UIColor+Random.h"
 
+@interface RootViewController () <RootViewDelegate>
+@end
+
 @implementation RootViewController
 
 - (RootView *)rootView {
@@ -32,6 +35,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.rootView.delegate = self;
+    self.rootView.backgroundColor = [UIColor randomColor];
+}
+
+#pragma mark - RootViewDelegate
+
+- (void)rootViewDidRequestChangeBackgroundColor:(RootView *)rootView {
     self.rootView.backgroundColor = [UIColor randomColor];
 }
 

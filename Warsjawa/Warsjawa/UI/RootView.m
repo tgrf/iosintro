@@ -53,6 +53,7 @@
 - (void)didTapChangeColor:(UIButton *)button {
     _changesCounter++;
     _changesCounterLabel.text = [NSString stringWithFormat:@"%ld", (long)_changesCounter];
+    [self.delegate rootViewDidRequestChangeBackgroundColor:self];
 }
 
 @end
