@@ -8,11 +8,22 @@
 
 #import "RootViewController.h"
 
+// private category
 @interface RootViewController ()
 
 @end
 
 @implementation RootViewController
+
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        _controllerName = NSStringFromClass([self class]);
+        NSLog(@"self.controllerName = %@", self.controllerName);
+    }
+
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

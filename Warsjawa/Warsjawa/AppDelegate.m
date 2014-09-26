@@ -18,7 +18,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = [[RootViewController alloc] initWithNibName:nil bundle:nil];
+
+    RootViewController *rootViewController = [[RootViewController alloc] initWithNibName:nil bundle:nil];
+    self.window.rootViewController = rootViewController;
+    NSLog(@"rootViewController.controllerName = %@", rootViewController.controllerName);
+
     [self.window makeKeyAndVisible];
 
     return YES;
