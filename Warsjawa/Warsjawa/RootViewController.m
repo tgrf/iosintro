@@ -31,6 +31,8 @@
 - (void)loadView {
     _myView = [[UIView alloc] initWithFrame:CGRectZero];
     self.view = _myView;
+
+    NSLog(@"self.view.frame = %@", [NSValue valueWithCGRect:self.view.frame]);
 }
 
 - (void)viewDidLoad {
@@ -40,6 +42,28 @@
     NSUInteger drawnNumber = (NSUInteger)(random() % 4);
     UIColor *backgroundColor = _colorsDictionary[@(drawnNumber)];
     self.view.backgroundColor = backgroundColor;
+
+    NSLog(@"self.view.frame = %@", [NSValue valueWithCGRect:self.view.frame]);
+}
+
+- (void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
+    NSLog(@"self.view.frame = %@", [NSValue valueWithCGRect:self.view.frame]);
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    NSLog(@"self.view.frame = %@", [NSValue valueWithCGRect:self.view.frame]);
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    NSLog(@"self.view.frame = %@", [NSValue valueWithCGRect:self.view.frame]);
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    NSLog(@"self.view.frame = %@", [NSValue valueWithCGRect:self.view.frame]);
 }
 
 @end
