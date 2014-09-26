@@ -35,6 +35,15 @@
         NSLog(@"_sampleArray.count = %u", _sampleArray.count);
         NSLog(@"_sampleArray.firstObject = %@", _sampleArray.firstObject);
         NSLog(@"_sampleArray.lastObject = %@", _sampleArray.lastObject);
+        NSLog(@"_sampleArray[2] = %@", _sampleArray[2]);
+
+        // NSDictionary
+        _sampleDictionary = @{ @1 : @"one", @2 : @"two", @3 : @"three", @4 : @"four", };
+        NSLog(@"_sampleDictionary = %@", _sampleDictionary);
+        NSLog(@"_sampleDictionary.count = %u", _sampleDictionary.count);
+        NSLog(@"_sampleDictionary.allKeys = %@", _sampleDictionary.allKeys);
+        NSLog(@"_sampleDictionary.allValues = %@", _sampleDictionary.allValues);
+        NSLog(@"_sampleDictionary[@2] = %@", _sampleDictionary[@2]);
     }
 
     return self;
