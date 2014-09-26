@@ -13,13 +13,15 @@
 
 @end
 
-@implementation RootViewController
+@implementation RootViewController {
+    NSString *_controllerName;
+}
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         _controllerName = NSStringFromClass([self class]);
-        NSLog(@"self.controllerName = %@", self.controllerName);
+        NSLog(@"self.controllerName = %@", _controllerName);
     }
 
     return self;
