@@ -28,6 +28,13 @@
 
         _superclassName = NSStringFromClass([self superclass]);
         NSLog(@"_superclassName = %@", _superclassName);
+
+        // NSArray of NSNumbers
+        _sampleArray = @[ @1, @2, @3, @4, ];
+        NSLog(@"_sampleArray = %@", _sampleArray);
+        NSLog(@"_sampleArray.count = %u", _sampleArray.count);
+        NSLog(@"_sampleArray.firstObject = %@", _sampleArray.firstObject);
+        NSLog(@"_sampleArray.lastObject = %@", _sampleArray.lastObject);
     }
 
     return self;

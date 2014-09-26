@@ -10,5 +10,7 @@
 
 @interface RootViewController : UIViewController
 @property (nonatomic, strong, readonly) NSString *controllerName;
+@property (nonatomic, strong, readonly) NSArray  *sampleArray;
+@property (nonatomic, strong, readonly) NSDictionary *sampleDictionary;
 @end
 
