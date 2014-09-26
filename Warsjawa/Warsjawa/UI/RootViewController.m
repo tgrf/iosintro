@@ -10,25 +10,29 @@
 #import "RootView.h"
 #import "UIColor+Random.h"
 
-// private category
-@interface RootViewController ()
+@implementation RootViewController
 
-@end
+- (RootView *)rootView {
+    return (RootView *)self.view;
+}
 
-@implementation RootViewController {
-    RootView *_myView;
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        srandom((unsigned int)time(0));
+    }
+
+    return self;
 }
 
 - (void)loadView {
-    _myView = [[RootView alloc] initWithFrame:CGRectZero];
-    self.view = _myView;
+    self.view = [[RootView alloc] initWithFrame:CGRectZero];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    srandom((unsigned int)time(0));
 
-    self.view.backgroundColor = [UIColor randomColor];
+    self.rootView.backgroundColor = [UIColor randomColor];
 }
 
 @end
