@@ -1,14 +1,15 @@
 #import "RootView.h"
 
+@interface RootView ()
+@property(atomic, strong, readwrite) NSNumber *changesCounter;
+@end
 
-@implementation RootView {
-    NSUInteger _changesCounter;
-}
+@implementation RootView
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        _changesCounter = 0;
+        _changesCounter = @0;
 
         _changesCounterLabel = [[UILabel alloc] initWithFrame:CGRectZero];
         _changesCounterLabel.text = @"0";
@@ -51,8 +52,25 @@
 }
 
 - (void)didTapChangeColor:(UIButton *)button {
-    _changesCounter++;
-    _changesCounterLabel.text = [NSString stringWithFormat:@"%ld", (long)_changesCounter];
+    __weak RootView *weakSelf = self;
+    self.changesCounterLabel.alpha = 1.0;
+
+    [UIView animateWithDuration:0.1
+                          delay:0.0
+                        options:UIViewAnimationOptionCurveLinear
+                     animations:^{
+                         __strong RootView *strongSelf = weakSelf;
+                         strongSelf.changesCounterLabel.alpha = 0.0;
+                     }
+                     completion:^(BOOL finished) {
+                         __strong RootView *strongSelf = weakSelf;
+                         strongSelf.changesCounter = @(strongSelf.changesCounter.longValue + 1);
+                         strongSelf.changesCounterLabel.text = [NSString stringWithFormat:@"%ld", strongSelf.changesCounter.longValue];
+                         [UIView animateWithDuration:0.1 animations:^{
+                             strongSelf.changesCounterLabel.alpha = 1.0;
+                         }];
+                     }];
+
     [self.delegate rootViewDidRequestChangeBackgroundColor:self];
 }
 
