@@ -20,7 +20,7 @@
         [_changeBackgroundColorButton setTitle:@"Change color!" forState:UIControlStateNormal];
         [_changeBackgroundColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         _changeBackgroundColorButton.backgroundColor = [UIColor blackColor];
-
+        [_changeBackgroundColorButton addTarget:self action:@selector(didTapChangeColor:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:_changeBackgroundColorButton];
     }
 
@@ -48,6 +48,11 @@
             self.bounds.size.width - 2*padding,
             60
     );
+}
+
+- (void)didTapChangeColor:(UIButton *)button {
+    _changesCounter++;
+    _changesCounterLabel.text = [NSString stringWithFormat:@"%ld", (long)_changesCounter];
 }
 
 @end
