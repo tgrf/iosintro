@@ -14,6 +14,7 @@
 		1539017019D6088A00F9EDF6 /* WarsjawaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1539016F19D6088A00F9EDF6 /* WarsjawaTests.m */; };
 		364BE27781E02060B20291FE /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BE512A00F56E453CFD309 /* RootViewController.m */; };
 		364BEAC573D6DB0FED141E55 /* RootView.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BE7E24E0992F423C26B7B /* RootView.m */; };
+		364BEC7E26478D39B850EAF0 /* UIColor+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BE5A3D6436401F1ED2441 /* UIColor+Random.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +39,10 @@
 		1539016E19D6088A00F9EDF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1539016F19D6088A00F9EDF6 /* WarsjawaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WarsjawaTests.m; sourceTree = "<group>"; };
 		364BE512A00F56E453CFD309 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		364BE5A3D6436401F1ED2441 /* UIColor+Random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Random.m"; sourceTree = "<group>"; };
 		364BE7E24E0992F423C26B7B /* RootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootView.m; sourceTree = "<group>"; };
 		364BEA3D4834208FFD25A6BC /* RootView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootView.h; sourceTree = "<group>"; };
+		364BEA82928FEC8A5D030B61 /* UIColor+Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Random.h"; sourceTree = "<group>"; };
 		364BEDBE488AB99224529410 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +91,8 @@
 				1539015719D6088A00F9EDF6 /* Warsjawa.xcdatamodeld */,
 				1539015019D6088A00F9EDF6 /* Supporting Files */,
 				364BE09E32328D0F5271D8FE /* UI */,
+				364BE5A3D6436401F1ED2441 /* UIColor+Random.m */,
+				364BEA82928FEC8A5D030B61 /* UIColor+Random.h */,
 			);
 			path = Warsjawa;
 			sourceTree = "<group>";
@@ -232,6 +237,7 @@
 				1539015319D6088A00F9EDF6 /* main.m in Sources */,
 				364BEAC573D6DB0FED141E55 /* RootView.m in Sources */,
 				364BE27781E02060B20291FE /* RootViewController.m in Sources */,
+				364BEC7E26478D39B850EAF0 /* UIColor+Random.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

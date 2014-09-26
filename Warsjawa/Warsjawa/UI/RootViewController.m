@@ -8,6 +8,7 @@
 
 #import "RootViewController.h"
 #import "RootView.h"
+#import "UIColor+Random.h"
 
 // private category
 @interface RootViewController ()
@@ -16,15 +17,6 @@
 
 @implementation RootViewController {
     RootView *_myView;
-}
-
-- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        _colorsDictionary = @{ @0 : [UIColor redColor], @1 : [UIColor whiteColor], @2 : [UIColor blueColor], @3 : [UIColor greenColor], };
-    }
-
-    return self;
 }
 
 - (void)loadView {
@@ -36,13 +28,7 @@
     [super viewDidLoad];
     srandom((unsigned int)time(0));
 
-    self.view.backgroundColor = [self drawColor];
-}
-
-- (UIColor *)drawColor {
-    NSUInteger drawnNumber = (NSUInteger)(random() % 4);
-    UIColor *backgroundColor = _colorsDictionary[@(drawnNumber)];
-    return backgroundColor;
+    self.view.backgroundColor = [UIColor randomColor];
 }
 
 @end
